@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import EmailSignup from "@/components/EmailSignup";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -67,6 +68,53 @@ export default function Home() {
               style={{ border: "2px solid #ff6b2b", color: "#ff6b2b" }}>
               Shop Peptides →
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Before / After */}
+      <section className="py-20 px-4" style={{ backgroundColor: "#242424" }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-xs font-black uppercase tracking-[0.4em] mb-3" style={{ color: "#ff6b2b" }}>
+              The Proof
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black uppercase" style={{ letterSpacing: "-0.02em" }}>
+              Before &amp; After
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 mb-6">
+            {/* Before */}
+            <div className="relative">
+              <div className="absolute top-4 left-4 z-10 px-3 py-1 text-xs font-black uppercase tracking-widest"
+                style={{ backgroundColor: "#1a1a1a", color: "#999" }}>
+                Before · Sept 2024
+              </div>
+              <Image src="/images/before-1.jpg" alt="Tobin Titus before transformation"
+                width={600} height={750} className="w-full object-cover"
+                style={{ maxHeight: "550px", objectPosition: "top" }} />
+            </div>
+
+            {/* After */}
+            <div className="relative">
+              <div className="absolute top-4 left-4 z-10 px-3 py-1 text-xs font-black uppercase tracking-widest"
+                style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
+                After · 16 Months Later
+              </div>
+              <Image src="/images/after-1.jpg" alt="Tobin Titus after transformation"
+                width={600} height={750} className="w-full object-cover"
+                style={{ maxHeight: "550px", objectPosition: "top" }} />
+            </div>
+          </div>
+
+          {/* More after photos */}
+          <div className="grid grid-cols-3 gap-3">
+            {["after-2.jpg", "after-3.jpg", "after-5.jpg"].map((img, i) => (
+              <Image key={i} src={`/images/${img}`} alt={`Tobin Titus transformation photo ${i + 2}`}
+                width={400} height={500} className="w-full object-cover"
+                style={{ maxHeight: "280px", objectPosition: "top" }} />
+            ))}
           </div>
         </div>
       </section>

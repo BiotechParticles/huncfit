@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Story() {
   return (
@@ -30,6 +31,22 @@ export default function Story() {
               I stopped believing that story. And over the next 16 months, I lost 155 pounds of fat 
               and gained 20 pounds of muscle. I have the DEXA scans and bloodwork to prove it.
             </p>
+
+            {/* Before/After inline */}
+            <div className="grid grid-cols-2 gap-4 my-10">
+              <div className="relative">
+                <div className="absolute top-3 left-3 z-10 px-2 py-1 text-xs font-black uppercase tracking-widest"
+                  style={{ backgroundColor: "#1a1a1a", color: "#999" }}>Before</div>
+                <Image src="/images/before-1.jpg" alt="Before" width={500} height={600}
+                  className="w-full object-cover" style={{ maxHeight: "400px", objectPosition: "top" }} />
+              </div>
+              <div className="relative">
+                <div className="absolute top-3 left-3 z-10 px-2 py-1 text-xs font-black uppercase tracking-widest"
+                  style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>After</div>
+                <Image src="/images/after-1.jpg" alt="After" width={500} height={600}
+                  className="w-full object-cover" style={{ maxHeight: "400px", objectPosition: "top" }} />
+              </div>
+            </div>
 
             <h2 className="text-3xl font-black uppercase mt-12 mb-6" style={{ color: "#f5f5f5" }}>
               What I Actually Did
