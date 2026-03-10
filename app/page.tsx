@@ -39,7 +39,7 @@ export default function Home() {
           </p>
 
           <p className="text-lg md:text-xl font-bold uppercase tracking-widest mb-4" style={{ color: "#999" }}>
-            16 months. Age 50. No surgery. No shortcuts.
+            16 months. Age 50. No shortcuts.
           </p>
 
           {/* The tagline */}
