@@ -29,7 +29,9 @@ export default function Story() {
 
             <p className="text-lg leading-relaxed mb-6">
               I stopped believing that story. And over the next 16 months, I lost 155 pounds of fat 
-              and gained 20 pounds of muscle. I have the DEXA scans and bloodwork to prove it.
+              <em> while simultaneously gaining 20 pounds of muscle</em>. That's called a body recomposition — 
+              and most people will tell you it's impossible, especially at 50. I have the DEXA scans 
+              and bloodwork to prove otherwise.
             </p>
 
             {/* Before/After inline */}

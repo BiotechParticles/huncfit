@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "HUNC FIT — Built at 50. Not for Everyone.",
-  description: "Tobin Titus lost 155 lbs of fat and gained 20 lbs of muscle at age 50. Here's everything he used, and how you can do it too.",
+  description: "Tobin Titus lost 155 lbs of fat while gaining 20 lbs of muscle — at the same time — at age 50. Body recomposition is possible. Here's exactly how he did it.",
   openGraph: {
     title: "HUNC FIT — Built at 50. Not for Everyone.",
     description: "Started at 49. Done by 50. 155 lbs of fat gone. 20 lbs of muscle gained. No surgery. No shortcuts. Just work — and the tools to keep doing it.",

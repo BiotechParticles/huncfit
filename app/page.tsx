@@ -27,15 +27,19 @@ export default function Home() {
             of Fat.
           </h1>
 
-          <h2 className="text-3xl md:text-5xl font-black uppercase leading-none mb-8"
+          <h2 className="text-3xl md:text-5xl font-black uppercase leading-none mb-4"
             style={{ color: "#f5f5f5", letterSpacing: "-0.02em" }}>
-            Then I Put On{" "}
+            While Gaining{" "}
             <span style={{ color: "#00d4c8" }}>20 lbs</span>{" "}
             of Muscle.
           </h2>
 
+          <p className="text-base md:text-lg font-black uppercase tracking-widest mb-2" style={{ color: "#00d4c8" }}>
+            At the same time. That's a recomp.
+          </p>
+
           <p className="text-lg md:text-xl font-bold uppercase tracking-widest mb-4" style={{ color: "#999" }}>
-            16 months. No surgery. No shortcuts.
+            16 months. Age 50. No surgery. No shortcuts.
           </p>
 
           {/* The tagline */}
