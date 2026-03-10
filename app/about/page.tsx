@@ -3,42 +3,61 @@ import EmailSignup from "@/components/EmailSignup";
 
 export default function About() {
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#111111' }}>
+    <main style={{ backgroundColor: "#1a1a1a", color: "#f5f5f5" }}>
       <Nav />
-      <div className="pt-24 max-w-3xl mx-auto px-4 py-16">
-        <p className="text-[#FF6B2B] font-bold tracking-widest uppercase text-sm mb-4">The Man Behind Hunc</p>
-        <h1 className="text-6xl md:text-7xl text-white mb-8 leading-none"
-            style={{ fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 900, textTransform: 'uppercase' }}>
-          Tobin <span style={{ color: '#FF6B2B' }}>Titus</span>
-        </h1>
 
-        <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
-          <p>
-            I&apos;m a 50-year-old from Llano, Texas. I own 40 acres of land I&apos;m building a home on. I have a day job I&apos;m working my way out of. I started this transformation at 49 because I was tired of feeling like I was losing.
+      <section className="pt-32 pb-24 px-4">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xs font-black uppercase tracking-[0.4em] mb-4" style={{ color: "#ff6b2b" }}>
+            About
           </p>
-          <p>
-            I&apos;m not a doctor. I&apos;m not a certified trainer. I&apos;m a guy who lost 155 pounds of fat and gained 20 pounds of muscle in 16 months, documented every step with DEXA scans and bloodwork, and figured out what actually works for older men who want to get serious.
-          </p>
-          <p>
-            Hunc Fit exists because I had nowhere to go when I was starting out. No community of older guys talking honestly about peptides, recovery, and what a real transformation looks like past 40. I&apos;m building that.
-          </p>
-          <p>
-            Hunc is a play on &quot;unc&quot; — slang for the older guys in the room. We&apos;re not trying to be 22. We&apos;re trying to be the most impressive version of ourselves at whatever age we are. That&apos;s the whole thing.
-          </p>
-        </div>
+          <h1 className="text-5xl md:text-7xl font-black uppercase mb-10" style={{ letterSpacing: "-0.02em" }}>
+            Tobin <span style={{ color: "#ff6b2b" }}>Titus</span>
+          </h1>
 
-        <div className="mt-12 p-6 rounded" style={{ backgroundColor: '#1a1a1a', borderLeft: '3px solid #FF6B2B' }}>
-          <p className="text-[#FF6B2B] font-bold uppercase tracking-wider text-sm mb-2">Get The Hunc Protocol</p>
-          <p className="text-gray-400 mb-6">The exact compounds, doses, and timeline from my 16-month transformation. Free.</p>
-          <EmailSignup />
-        </div>
+          <div style={{ color: "#ccc" }}>
+            <p className="text-xl leading-relaxed mb-6">
+              I'm a 50-year-old guy from Llano, Texas who decided to stop accepting what I thought 
+              was inevitable.
+            </p>
 
-        <div className="mt-12">
-          <p className="text-gray-500 text-sm">
-            Questions? Reach out: <a href="mailto:tobin@huncfit.com" className="text-[#FF6B2B] hover:underline">tobin@huncfit.com</a>
-          </p>
+            <p className="text-lg leading-relaxed mb-6">
+              Over 16 months — from September 2024 to early 2026 — I transformed my body in a way 
+              I didn't think was possible at my age. 155 pounds of fat gone. 20 pounds of muscle built. 
+              DEXA scans and bloodwork documenting every step.
+            </p>
+
+            <p className="text-lg leading-relaxed mb-6">
+              I built Hunc Fit to share what I learned — honestly, without hype, without selling 
+              you a miracle. The work is yours to do. I just want to give you the tools I wished 
+              I'd known about sooner.
+            </p>
+
+            <p className="text-lg leading-relaxed mb-12">
+              The peptides I used are available through <a href="https://biotechparticles.com" 
+              target="_blank" rel="noopener noreferrer" style={{ color: "#ff6b2b" }}>BioTech Particles</a> — 
+              research-grade compounds, sourced and sold for research use only.
+            </p>
+
+            <div className="p-6 mb-12" style={{ backgroundColor: "#242424", borderLeft: "4px solid #ff6b2b" }}>
+              <p className="font-black uppercase tracking-wide mb-2" style={{ color: "#f5f5f5" }}>
+                Interested in coaching?
+              </p>
+              <p style={{ color: "#999" }}>
+                I'm exploring a limited coaching program for serious guys who want to go through 
+                a similar transformation. Drop your email below and I'll reach out when it's ready.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-start gap-4">
+              <p className="text-sm font-bold uppercase tracking-widest" style={{ color: "#999" }}>
+                Get on the list
+              </p>
+              <EmailSignup />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

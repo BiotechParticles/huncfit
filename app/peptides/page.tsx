@@ -5,131 +5,172 @@ export default function Peptides() {
     {
       name: "BPC-157",
       category: "Recovery",
-      color: "#FF6B2B",
-      description: "Body Protection Compound. Studied for its role in tissue repair and recovery. A cornerstone of any serious recovery protocol.",
-      research: "Extensive preclinical research on tendon, muscle, and joint repair."
+      color: "#ff6b2b",
+      tagline: "The one that keeps you in the game.",
+      description: "Body Protection Compound-157 is one of the most researched peptides for tissue repair and recovery. Studies have examined its role in healing tendons, ligaments, muscles, and even gut tissue.",
+      researchNotes: "Research suggests potential benefits for musculoskeletal repair, gut healing, and reducing inflammation. Used extensively in sports recovery research.",
     },
     {
       name: "TB-500",
       category: "Recovery",
-      color: "#FF6B2B",
-      description: "Thymosin Beta-4 fragment. Works synergistically with BPC-157. Together these two changed my recovery timeline completely.",
-      research: "Studied for cellular repair, flexibility, and inflammation response."
+      color: "#ff6b2b",
+      tagline: "Soft tissue repair, accelerated.",
+      description: "Thymosin Beta-4 is a naturally occurring peptide found in all human and animal cells. Research has focused on its role in wound healing, muscle recovery, and reducing inflammation in soft tissue.",
+      researchNotes: "Studies suggest TB-500 may promote the growth of new blood vessels and muscle tissue while reducing inflammation. Often studied alongside BPC-157.",
     },
     {
       name: "SS-31",
       category: "Mitochondrial",
-      color: "#00D4C8",
-      description: "Elamipretide. Targets mitochondria directly. If you feel perpetually depleted, this is worth understanding.",
-      research: "Research focused on mitochondrial function and cellular energy production."
+      color: "#00d4c8",
+      tagline: "Fix your energy at the source.",
+      description: "SS-31 (Elamipretide) is a mitochondria-targeted peptide that has been studied for its ability to protect and restore mitochondrial function — the cellular engines that produce your energy.",
+      researchNotes: "Research has explored SS-31 for age-related mitochondrial decline, cardiac function, and fatigue. One of the most promising compounds in longevity research.",
     },
     {
       name: "MOTS-C",
       category: "Mitochondrial",
-      color: "#00D4C8",
-      description: "Mitochondrial-derived peptide. Called a 'mitochondrial hormone.' Part of what got me off the couch.",
-      research: "Studied for metabolic regulation and physical endurance."
+      color: "#00d4c8",
+      tagline: "Metabolic performance at the cellular level.",
+      description: "MOTS-C is a mitochondria-derived peptide that plays a role in regulating metabolism, insulin sensitivity, and cellular stress responses. Research has shown interesting effects on exercise performance and metabolic health.",
+      researchNotes: "Studies indicate MOTS-C may influence fat metabolism, glucose regulation, and physical performance. Considered a key longevity-related compound.",
     },
     {
       name: "NAD+",
-      category: "Mitochondrial",
-      color: "#00D4C8",
-      description: "Not technically a peptide, but part of the stack. Cellular energy currency. Declines significantly with age.",
-      research: "Extensive research on aging, cellular repair, and energy metabolism."
+      category: "Longevity",
+      color: "#9b59b6",
+      tagline: "The coenzyme your cells can't do without.",
+      description: "NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme found in every cell in your body. It declines significantly with age. Supplementation via precursors has become one of the most studied interventions in longevity research.",
+      researchNotes: "Research suggests NAD+ restoration may support DNA repair, mitochondrial function, and healthy aging. Declines ~50% between ages 40 and 60.",
     },
     {
       name: "Glutathione",
-      category: "Mitochondrial",
-      color: "#00D4C8",
-      description: "The master antioxidant. Supports detoxification and immune function. Foundational to everything else working properly.",
-      research: "Well-studied antioxidant with broad research across multiple body systems."
-    },
-    {
-      name: "Methylene Blue",
-      category: "Mitochondrial",
-      color: "#00D4C8",
-      description: "One of the oldest compounds in medicine. Powerful mitochondrial electron carrier. Cognitive clarity and energy.",
-      research: "Over 150 years of research. Currently studied for neuroprotection and mitochondrial support."
+      category: "Longevity",
+      color: "#9b59b6",
+      tagline: "Your body's master antioxidant.",
+      description: "Glutathione is the body's most powerful antioxidant, produced naturally but declining significantly with age, stress, and illness. It plays a central role in detoxification, immune function, and cellular protection.",
+      researchNotes: "Studies have examined glutathione's role in reducing oxidative stress, supporting immune function, and protecting against cellular damage. Also declines with age.",
     },
   ];
 
   return (
-    <main className="min-h-screen" style={{ backgroundColor: '#111111' }}>
+    <main style={{ backgroundColor: "#1a1a1a", color: "#f5f5f5" }}>
       <Nav />
-      <div className="pt-24 max-w-4xl mx-auto px-4 py-16">
-        <p className="text-[#FF6B2B] font-bold tracking-widest uppercase text-sm mb-4">Education</p>
-        <h1 className="text-6xl md:text-7xl text-white mb-6 leading-none"
-            style={{ fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 900, textTransform: 'uppercase' }}>
-          Peptides <span style={{ color: '#FF6B2B' }}>101</span>
-        </h1>
-        <p className="text-gray-400 text-lg mb-4 max-w-2xl leading-relaxed">
-          Peptides are short chains of amino acids — the building blocks of proteins. They act as signaling molecules, telling your body to do things it already knows how to do, just better and faster.
-        </p>
-        <p className="text-gray-400 text-lg mb-12 max-w-2xl leading-relaxed">
-          <strong className="text-white">Important:</strong> All information here is for educational purposes only. These compounds are sold for research purposes and are not intended for human consumption. Always consult a physician.
-        </p>
 
-        {/* Recovery Stack */}
-        <h2 className="text-3xl text-white mb-6"
-            style={{ fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 800, textTransform: 'uppercase' }}>
-          <span style={{ color: '#FF6B2B' }}>Recovery</span> Stack
-        </h2>
-        <div className="grid md:grid-cols-2 gap-4 mb-12">
-          {compounds.filter(c => c.category === "Recovery").map(compound => (
-            <div key={compound.name} className="p-6 rounded"
-                 style={{ backgroundColor: '#1a1a1a', borderLeft: `3px solid ${compound.color}` }}>
-              <div className="flex items-center gap-3 mb-2">
-                <h3 className="text-xl font-black text-white"
-                    style={{ fontFamily: 'Barlow Condensed, sans-serif', textTransform: 'uppercase' }}>
-                  {compound.name}
-                </h3>
-                <span className="text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider"
-                      style={{ backgroundColor: compound.color + '20', color: compound.color }}>
-                  {compound.category}
-                </span>
-              </div>
-              <p className="text-gray-300 text-sm leading-relaxed mb-3">{compound.description}</p>
-              <p className="text-gray-500 text-xs italic">{compound.research}</p>
+      <section className="pt-32 pb-8 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs font-black uppercase tracking-[0.4em] mb-4" style={{ color: "#ff6b2b" }}>
+            Education
+          </p>
+          <h1 className="text-5xl md:text-7xl font-black uppercase mb-6" style={{ letterSpacing: "-0.02em" }}>
+            Peptides 101
+          </h1>
+          <p className="text-xl mb-6" style={{ color: "#999" }}>
+            What they are, what the research says, and what I actually used.
+          </p>
+          <div className="p-4 text-sm" style={{ backgroundColor: "#2e2e2e", color: "#999", border: "1px solid #3e3e3e" }}>
+            <strong style={{ color: "#ff6b2b" }}>Research Disclaimer:</strong> All content on this page is for educational and informational purposes only. 
+            Peptides are discussed in the context of scientific research. They are not approved for human use by the FDA 
+            and are sold for research purposes only. Nothing here is medical advice.
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Category: Recovery */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px flex-1" style={{ backgroundColor: "#ff6b2b" }}></div>
+              <h2 className="text-sm font-black uppercase tracking-[0.3em]" style={{ color: "#ff6b2b" }}>
+                Recovery Stack
+              </h2>
+              <div className="h-px flex-1" style={{ backgroundColor: "#ff6b2b" }}></div>
             </div>
-          ))}
-        </div>
 
-        {/* Mitochondrial Stack */}
-        <h2 className="text-3xl text-white mb-6"
-            style={{ fontFamily: 'Barlow Condensed, sans-serif', fontWeight: 800, textTransform: 'uppercase' }}>
-          <span style={{ color: '#00D4C8' }}>Mitochondrial</span> Stack
-        </h2>
-        <div className="grid md:grid-cols-2 gap-4 mb-12">
-          {compounds.filter(c => c.category === "Mitochondrial").map(compound => (
-            <div key={compound.name} className="p-6 rounded"
-                 style={{ backgroundColor: '#1a1a1a', borderLeft: `3px solid ${compound.color}` }}>
-              <div className="flex items-center gap-3 mb-2">
-                <h3 className="text-xl font-black text-white"
-                    style={{ fontFamily: 'Barlow Condensed, sans-serif', textTransform: 'uppercase' }}>
-                  {compound.name}
-                </h3>
-                <span className="text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider"
-                      style={{ backgroundColor: compound.color + '20', color: compound.color }}>
-                  {compound.category}
-                </span>
-              </div>
-              <p className="text-gray-300 text-sm leading-relaxed mb-3">{compound.description}</p>
-              <p className="text-gray-500 text-xs italic">{compound.research}</p>
+            <div className="flex flex-col gap-6">
+              {compounds.filter(c => c.category === "Recovery").map(compound => (
+                <div key={compound.name} className="p-6" style={{ backgroundColor: "#242424", borderLeft: `4px solid ${compound.color}` }}>
+                  <h3 className="text-3xl font-black uppercase mb-1">{compound.name}</h3>
+                  <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: compound.color }}>
+                    {compound.tagline}
+                  </p>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: "#ccc" }}>{compound.description}</p>
+                  <p className="text-sm" style={{ color: "#777" }}>
+                    <strong style={{ color: "#999" }}>Research notes:</strong> {compound.researchNotes}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="p-6 rounded text-center" style={{ backgroundColor: '#1a1a1a', border: '1px solid #FF6B2B40' }}>
-          <p className="text-gray-400 mb-4">Ready to source research compounds?</p>
-          <a href="https://biotechparticles.com"
-            target="_blank" rel="noopener noreferrer"
-            className="inline-block px-8 py-3 font-bold uppercase tracking-wider rounded transition-opacity hover:opacity-90"
-            style={{ backgroundColor: '#FF6B2B', color: '#111111' }}>
-            Shop Biotech Particles →
-          </a>
-          <p className="text-gray-600 text-xs mt-4">Research purposes only. Not for human consumption.</p>
+          {/* Category: Mitochondrial */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px flex-1" style={{ backgroundColor: "#00d4c8" }}></div>
+              <h2 className="text-sm font-black uppercase tracking-[0.3em]" style={{ color: "#00d4c8" }}>
+                Mitochondrial Stack
+              </h2>
+              <div className="h-px flex-1" style={{ backgroundColor: "#00d4c8" }}></div>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              {compounds.filter(c => c.category === "Mitochondrial").map(compound => (
+                <div key={compound.name} className="p-6" style={{ backgroundColor: "#242424", borderLeft: `4px solid ${compound.color}` }}>
+                  <h3 className="text-3xl font-black uppercase mb-1">{compound.name}</h3>
+                  <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: compound.color }}>
+                    {compound.tagline}
+                  </p>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: "#ccc" }}>{compound.description}</p>
+                  <p className="text-sm" style={{ color: "#777" }}>
+                    <strong style={{ color: "#999" }}>Research notes:</strong> {compound.researchNotes}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Category: Longevity */}
+          <div className="mb-16">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px flex-1" style={{ backgroundColor: "#9b59b6" }}></div>
+              <h2 className="text-sm font-black uppercase tracking-[0.3em]" style={{ color: "#9b59b6" }}>
+                Longevity Stack
+              </h2>
+              <div className="h-px flex-1" style={{ backgroundColor: "#9b59b6" }}></div>
+            </div>
+
+            <div className="flex flex-col gap-6">
+              {compounds.filter(c => c.category === "Longevity").map(compound => (
+                <div key={compound.name} className="p-6" style={{ backgroundColor: "#242424", borderLeft: `4px solid ${compound.color}` }}>
+                  <h3 className="text-3xl font-black uppercase mb-1">{compound.name}</h3>
+                  <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: compound.color }}>
+                    {compound.tagline}
+                  </p>
+                  <p className="text-base leading-relaxed mb-4" style={{ color: "#ccc" }}>{compound.description}</p>
+                  <p className="text-sm" style={{ color: "#777" }}>
+                    <strong style={{ color: "#999" }}>Research notes:</strong> {compound.researchNotes}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center py-12" style={{ backgroundColor: "#242424" }}>
+            <p className="text-sm uppercase tracking-widest mb-4" style={{ color: "#999" }}>
+              Ready to source these compounds?
+            </p>
+            <a href="https://biotechparticles.com" target="_blank" rel="noopener noreferrer"
+              className="inline-block px-8 py-4 font-black uppercase tracking-widest text-sm transition-all hover:opacity-90"
+              style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
+              Shop BioTech Particles →
+            </a>
+            <p className="text-xs mt-4" style={{ color: "#555" }}>
+              For research use only.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
