@@ -24,7 +24,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid product or size" }, { status: 400 });
   }
 
-  const session = await stripe.checkout.sessions.create({
+  let session;
+  try {
+  session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     line_items: [{
       price_data: {
@@ -44,6 +46,11 @@ export async function POST(req: NextRequest) {
     success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop/success`,
     cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop`,
   });
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    console.error("Stripe error:", msg);
+    return NextResponse.json({ error: msg }, { status: 500 });
+  }
 
   return NextResponse.json({ url: session.url });
 }
