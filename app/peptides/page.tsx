@@ -56,7 +56,7 @@ export default function Peptides() {
     <main style={{ backgroundColor: "#1a1a1a", color: "#f5f5f5" }}>
       <Nav />
 
-      <section className="pt-40 pb-8 px-4">
+      <section className="pt-48 pb-8 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs font-black uppercase tracking-[0.4em] mb-4" style={{ color: "#ff6b2b" }}>
             Education
