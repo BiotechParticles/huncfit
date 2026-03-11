@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
         currency: "usd",
         product_data: {
           name: product.name,
-          description: `Size: ${size} | Bella+Canvas 3001 | Ships in 3–5 days`,
+          description: `Size: ${size} | Bella+Canvas 3001 | Ships in 3-5 days`,
           images: [product.image],
         },
         unit_amount: product.price,
