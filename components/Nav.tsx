@@ -15,21 +15,24 @@ export default function Nav() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest">
+        <div className="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest items-center">
           <Link href="/story" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
             The Story
           </Link>
+          <Link href="/coaching" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
+            Coaching
+          </Link>
+          <Link href="/merch" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
+            Merch
+          </Link>
           <Link href="/peptides" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
-            Peptides 101
+            Peptides
           </Link>
-          <Link href="/about" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
-            About
-          </Link>
-          <a href="https://biotechparticles.com" target="_blank" rel="noopener noreferrer"
-            className="px-4 py-2 font-black uppercase tracking-wider text-sm transition-all"
+          <Link href="/coaching"
+            className="px-4 py-2 font-black uppercase tracking-wider text-sm transition-all hover:opacity-90"
             style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
-            Get Peptides →
-          </a>
+            Work With Me →
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -47,13 +50,15 @@ export default function Nav() {
         <div className="md:hidden px-4 pb-4 flex flex-col gap-4 text-sm font-bold uppercase tracking-widest"
           style={{ backgroundColor: "#1a1a1a" }}>
           <Link href="/story" style={{ color: "#999" }} onClick={() => setOpen(false)}>The Story</Link>
-          <Link href="/peptides" style={{ color: "#999" }} onClick={() => setOpen(false)}>Peptides 101</Link>
-          <Link href="/about" style={{ color: "#999" }} onClick={() => setOpen(false)}>About</Link>
-          <a href="https://biotechparticles.com" target="_blank" rel="noopener noreferrer"
+          <Link href="/coaching" style={{ color: "#999" }} onClick={() => setOpen(false)}>Coaching</Link>
+          <Link href="/merch" style={{ color: "#999" }} onClick={() => setOpen(false)}>Merch</Link>
+          <Link href="/peptides" style={{ color: "#999" }} onClick={() => setOpen(false)}>Peptides</Link>
+          <Link href="/coaching"
             className="text-center py-3 font-black"
-            style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
-            Get Peptides →
-          </a>
+            style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}
+            onClick={() => setOpen(false)}>
+            Work With Me →
+          </Link>
         </div>
       )}
     </nav>

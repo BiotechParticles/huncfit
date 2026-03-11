@@ -13,12 +13,10 @@ export default function Home() {
         style={{ backgroundColor: "#1a1a1a" }}>
         <div className="w-full max-w-4xl mx-auto px-4">
 
-          {/* Eyebrow */}
           <p className="text-xs font-black uppercase tracking-[0.4em] mb-6" style={{ color: "#ff6b2b" }}>
             Started at 49 · Done by 50
           </p>
 
-          {/* Headline */}
           <h1 className="text-5xl md:text-8xl font-black uppercase leading-none mb-6"
             style={{ letterSpacing: "-0.02em" }}>
             I Lost{" "}
@@ -38,40 +36,30 @@ export default function Home() {
             At the same time. That's a recomp.
           </p>
 
-          <p className="text-lg md:text-xl font-bold uppercase tracking-widest mb-4" style={{ color: "#999" }}>
+          <p className="text-lg md:text-xl font-bold uppercase tracking-widest mb-8" style={{ color: "#999" }}>
             16 months. Age 50. No shortcuts.
           </p>
 
-          {/* The tagline */}
           <div className="my-10 py-8 border-t border-b" style={{ borderColor: "#2e2e2e" }}>
-            <p className="text-xl md:text-2xl font-black uppercase tracking-wide" style={{ color: "#f5f5f5" }}>
-              "Peptides don't do the work.
+            <p className="text-xl md:text-2xl font-black uppercase tracking-wide mb-2" style={{ color: "#f5f5f5" }}>
+              I did it. I'll show you how.
             </p>
-            <p className="text-xl md:text-2xl font-black uppercase tracking-wide" style={{ color: "#ff6b2b" }}>
-              They let you keep doing it."
+            <p className="text-base md:text-lg" style={{ color: "#999" }}>
+              Online coaching, real training, and the tools most guys your age don't know exist.
             </p>
           </div>
 
-          {/* Email CTA */}
-          <div className="flex flex-col items-center gap-4 mb-10">
-            <p className="text-sm font-bold uppercase tracking-widest" style={{ color: "#999" }}>
-              Get the exact protocol I used — free
-            </p>
-            <EmailSignup />
-          </div>
-
-          {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/story"
+            <Link href="/coaching"
               className="px-8 py-4 font-black uppercase tracking-widest text-sm transition-all hover:opacity-90"
               style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
-              Read the Full Story →
+              Work With Me →
             </Link>
-            <a href="https://biotechparticles.com" target="_blank" rel="noopener noreferrer"
+            <Link href="/story"
               className="px-8 py-4 font-black uppercase tracking-widest text-sm transition-all"
               style={{ border: "2px solid #ff6b2b", color: "#ff6b2b" }}>
-              Shop Peptides →
-            </a>
+              My Story →
+            </Link>
           </div>
         </div>
       </section>
@@ -89,7 +77,6 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 mb-6">
-            {/* Before */}
             <div className="relative">
               <div className="absolute top-4 left-4 z-10 px-3 py-1 text-xs font-black uppercase tracking-widest"
                 style={{ backgroundColor: "#1a1a1a", color: "#999" }}>
@@ -99,8 +86,6 @@ export default function Home() {
                 width={600} height={750} className="w-full object-cover"
                 style={{ maxHeight: "550px", objectPosition: "top" }} />
             </div>
-
-            {/* After */}
             <div className="relative">
               <div className="absolute top-4 left-4 z-10 px-3 py-1 text-xs font-black uppercase tracking-widest"
                 style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
@@ -112,7 +97,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* More after photos */}
           <div className="grid grid-cols-3 gap-3">
             {["after-3.jpg", "after-2.jpg", "after-5.jpg"].map((img, i) => (
               <Image key={i} src={`/images/${img}`} alt={`Tobin Titus transformation photo ${i + 2}`}
@@ -133,19 +117,15 @@ export default function Home() {
             { num: "Age 50", label: "When Done" },
           ].map((stat) => (
             <div key={stat.label}>
-              <p className="text-3xl md:text-4xl font-black uppercase" style={{ color: "#1a1a1a" }}>
-                {stat.num}
-              </p>
-              <p className="text-xs font-black uppercase tracking-widest mt-1" style={{ color: "#1a1a1a", opacity: 0.7 }}>
-                {stat.label}
-              </p>
+              <p className="text-3xl md:text-4xl font-black uppercase" style={{ color: "#1a1a1a" }}>{stat.num}</p>
+              <p className="text-xs font-black uppercase tracking-widest mt-1" style={{ color: "#1a1a1a", opacity: 0.7 }}>{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* What is Hunc */}
-      <section className="py-24 px-4" style={{ backgroundColor: "#242424" }}>
+      {/* Who this is for */}
+      <section className="py-24 px-4" style={{ backgroundColor: "#1a1a1a" }}>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs font-black uppercase tracking-[0.4em] mb-4" style={{ color: "#00d4c8" }}>
             Who This Is For
@@ -159,87 +139,74 @@ export default function Home() {
             the most impressive version of yourself at whatever age you are right now.
           </p>
           <p className="text-lg md:text-xl leading-relaxed mb-10" style={{ color: "#ccc" }}>
-            Your body doesn't recover the way it used to. Your energy isn't what it was. 
-            But you haven't given up. You just need the right tools to keep showing up.
+            Your recovery is slower. Your energy isn't what it was. But you haven't given up. 
+            You just need the right system — and someone who's actually done it at your age.
           </p>
-          <Link href="/story"
-            className="inline-block px-8 py-4 font-black uppercase tracking-widest text-sm"
-            style={{ border: "2px solid #00d4c8", color: "#00d4c8" }}>
-            My Story →
+          <Link href="/coaching"
+            className="inline-block px-8 py-4 font-black uppercase tracking-widest text-sm transition-all hover:opacity-90"
+            style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
+            Work With Me →
           </Link>
         </div>
       </section>
 
-      {/* What are peptides */}
-      <section className="py-24 px-4" style={{ backgroundColor: "#1a1a1a" }}>
+      {/* How it works */}
+      <section className="py-24 px-4" style={{ backgroundColor: "#242424" }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-xs font-black uppercase tracking-[0.4em] mb-4" style={{ color: "#ff6b2b" }}>
-              The Tools
+              The System
             </p>
             <h2 className="text-4xl md:text-6xl font-black uppercase" style={{ letterSpacing: "-0.02em" }}>
-              What I Actually Used
+              How I Did It
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              {
-                name: "BPC-157",
-                category: "Recovery",
-                desc: "Body Protection Compound. Used for injury recovery and reducing inflammation. Kept me training through the setbacks.",
-                color: "#ff6b2b",
-              },
-              {
-                name: "TB-500",
-                category: "Recovery",
-                desc: "Thymosin Beta-4. Accelerated soft tissue repair. When I should've been resting for a week, I was back in 2 days.",
-                color: "#ff6b2b",
-              },
-              {
-                name: "SS-31 + MOTS-C",
-                category: "Energy",
-                desc: "Mitochondrial support stack. The energy difference was noticeable within weeks. Less fatigue, more output.",
-                color: "#00d4c8",
-              },
-              {
-                name: "NAD+ + Glutathione",
-                category: "Longevity",
-                desc: "Cellular repair and antioxidant support. Part of the foundation that made everything else work better.",
-                color: "#00d4c8",
-              },
+              { num: "01", title: "Training", desc: "7–10 miles walking daily. 5 days of lifting per week. Consistency over intensity — especially at our age.", color: "#ff6b2b" },
+              { num: "02", title: "Nutrition", desc: "Stopped drinking. Started eating like someone who actually wanted results. No crash diets, no counting every calorie.", color: "#ff6b2b" },
+              { num: "03", title: "Recovery", desc: "Sleep, stress management, and tools that helped me bounce back fast enough to keep showing up.", color: "#00d4c8" },
+              { num: "04", title: "Advanced Tools", desc: "Peptides for recovery and energy when I needed an edge. The last piece of the puzzle — not the first.", color: "#00d4c8" },
             ].map((item) => (
-              <div key={item.name} className="p-6" style={{ backgroundColor: "#242424", borderLeft: `3px solid ${item.color}` }}>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-black uppercase tracking-widest px-2 py-1"
-                    style={{ backgroundColor: item.color, color: "#1a1a1a" }}>
-                    {item.category}
-                  </span>
-                </div>
-                <h3 className="text-2xl font-black uppercase mb-2">{item.name}</h3>
+              <div key={item.num} className="p-6" style={{ backgroundColor: "#1a1a1a", borderLeft: `3px solid ${item.color}` }}>
+                <p className="text-5xl font-black mb-3" style={{ color: item.color, opacity: 0.3 }}>{item.num}</p>
+                <h3 className="text-2xl font-black uppercase mb-2">{item.title}</h3>
                 <p style={{ color: "#999" }}>{item.desc}</p>
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Link href="/peptides"
-              className="inline-block px-8 py-4 font-black uppercase tracking-widest text-sm transition-all hover:opacity-90"
-              style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
-              Full Peptides 101 Guide →
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Bottom CTA */}
+      {/* Merch teaser */}
+      <section className="py-24 px-4" style={{ backgroundColor: "#1a1a1a" }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs font-black uppercase tracking-[0.4em] mb-4" style={{ color: "#ff6b2b" }}>
+            Merch
+          </p>
+          <h2 className="text-4xl md:text-5xl font-black uppercase mb-6" style={{ letterSpacing: "-0.02em" }}>
+            Wear the Brand
+          </h2>
+          <p className="text-lg mb-8" style={{ color: "#999" }}>
+            Shirts for guys who've put in the work. Dropping soon.
+          </p>
+          <Link href="/merch"
+            className="inline-block px-8 py-4 font-black uppercase tracking-widest text-sm"
+            style={{ border: "2px solid #ff6b2b", color: "#ff6b2b" }}>
+            See What's Coming →
+          </Link>
+        </div>
+      </section>
+
+      {/* Email CTA */}
       <section className="py-24 px-4 text-center" style={{ backgroundColor: "#242424" }}>
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-black uppercase mb-6" style={{ letterSpacing: "-0.02em" }}>
-            Ready to <span style={{ color: "#ff6b2b" }}>Start?</span>
+          <h2 className="text-4xl md:text-5xl font-black uppercase mb-6" style={{ letterSpacing: "-0.02em" }}>
+            Get the <span style={{ color: "#ff6b2b" }}>Protocol</span>
           </h2>
           <p className="text-lg mb-10" style={{ color: "#999" }}>
-            Get the exact protocol Tobin used — the peptides, the stack, the timing — delivered to your inbox for free.
+            The exact system I used — training, nutrition, recovery, and the advanced tools. Free.
           </p>
           <div className="flex flex-col items-center gap-4">
             <EmailSignup />
@@ -253,9 +220,11 @@ export default function Home() {
           © 2026 HuncFit. All rights reserved.
         </p>
         <p className="text-xs" style={{ color: "#444" }}>
-          Content on this site is for educational and informational purposes only. 
-          Peptides are sold for research use only. Not for human consumption. 
-          Not intended to diagnose, treat, or prevent any condition.
+          Peptide content is for educational purposes only. Research compounds sold separately via{" "}
+          <a href="https://biotechparticles.com" target="_blank" rel="noopener noreferrer" style={{ color: "#555" }}>
+            BioTech Particles
+          </a>
+          {" "}for research use only.
         </p>
       </footer>
     </main>
