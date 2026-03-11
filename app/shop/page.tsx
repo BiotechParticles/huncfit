@@ -138,10 +138,13 @@ function ProductCard({ p }: { p: typeof products[0] }) {
             ))}
           </div>
         )}
-        <Image src={imgSrc} alt={`${p.name} - ${color}`}
-          fill className="object-contain p-4"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={imgSrc}
+          alt={`${p.name} - ${color}`}
+          className="w-full object-contain"
+          style={{ height: "100%", padding: "16px" }}
           onError={(e) => {
-            // Fallback to design graphic if mockup not ready
             (e.target as HTMLImageElement).src = `/images/shirt-${p.id}.png`;
           }}
         />
