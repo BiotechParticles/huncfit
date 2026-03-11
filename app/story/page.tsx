@@ -7,7 +7,7 @@ export default function Story() {
     <main style={{ backgroundColor: "#1a1a1a", color: "#f5f5f5" }}>
       <Nav />
 
-      <section className="pt-32 pb-16 px-4">
+      <section className="pt-40 pb-16 px-4">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs font-black uppercase tracking-[0.4em] mb-4" style={{ color: "#ff6b2b" }}>
             The Story
@@ -39,7 +39,7 @@ export default function Story() {
               <div className="relative">
                 <div className="absolute top-3 left-3 z-10 px-2 py-1 text-xs font-black uppercase tracking-widest"
                   style={{ backgroundColor: "#1a1a1a", color: "#999" }}>Before</div>
-                <Image src="/images/before-1.jpg" alt="Before" width={500} height={600}
+                <Image src="/images/before-hero.jpg" alt="Before" width={500} height={600}
                   className="w-full object-cover" style={{ maxHeight: "400px", objectPosition: "top" }} />
               </div>
               <div className="relative">
