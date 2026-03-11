@@ -24,8 +24,8 @@ export default function Nav() {
           <Link href="/coaching" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
             Coaching
           </Link>
-          <Link href="/merch" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
-            Merch
+          <Link href="/shop" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
+            Shop
           </Link>
           <Link href="/peptides" className="hover:text-orange-400 transition-colors" style={{ color: "#999" }}>
             Peptides
@@ -53,7 +53,7 @@ export default function Nav() {
           style={{ backgroundColor: "#1a1a1a" }}>
           <Link href="/story" style={{ color: "#999" }} onClick={() => setOpen(false)}>The Story</Link>
           <Link href="/coaching" style={{ color: "#999" }} onClick={() => setOpen(false)}>Coaching</Link>
-          <Link href="/merch" style={{ color: "#999" }} onClick={() => setOpen(false)}>Merch</Link>
+          <Link href="/shop" style={{ color: "#999" }} onClick={() => setOpen(false)}>Shop</Link>
           <Link href="/peptides" style={{ color: "#999" }} onClick={() => setOpen(false)}>Peptides</Link>
           <Link href="/coaching"
             className="text-center py-3 font-black"
