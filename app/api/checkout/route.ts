@@ -24,6 +24,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid product or size" }, { status: 400 });
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://huncfit.com";
+  console.log("base_url chars:", [...baseUrl].map(c => c.charCodeAt(0)));
+
   let session;
   try {
   session = await stripe.checkout.sessions.create({
@@ -34,7 +37,7 @@ export async function POST(req: NextRequest) {
         product_data: {
           name: product.name,
           description: `Size: ${size} | Bella+Canvas 3001 | Ships in 3-5 days`,
-          images: [product.image],
+          // images: [product.image], // temporarily disabled
         },
         unit_amount: product.price,
       },
@@ -43,8 +46,8 @@ export async function POST(req: NextRequest) {
     mode: "payment",
     shipping_address_collection: { allowed_countries: ["US", "CA", "GB", "AU"] },
     metadata: { productId, size },
-    success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop/success`,
-    cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/shop`,
+    success_url: `${baseUrl}/shop/success`,
+    cancel_url: `${baseUrl}/shop`,
   });
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
