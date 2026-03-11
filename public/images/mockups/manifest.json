@@ -1,0 +1,44 @@
+{
+  "unc-daddy": {
+    "black": "/images/mockups/unc-daddy-black.jpg",
+    "white": "/images/mockups/unc-daddy-white.jpg",
+    "grey": "/images/mockups/unc-daddy-grey.jpg",
+    "red": "/images/mockups/unc-daddy-red.jpg"
+  },
+  "unc-season": {
+    "black": "/images/mockups/unc-season-black.jpg",
+    "white": "/images/mockups/unc-season-white.jpg",
+    "grey": "/images/mockups/unc-season-grey.jpg",
+    "red": "/images/mockups/unc-season-red.jpg"
+  },
+  "built-80s": {
+    "black": "/images/mockups/built-80s-black.jpg",
+    "white": "/images/mockups/built-80s-white.jpg",
+    "grey": "/images/mockups/built-80s-grey.jpg",
+    "red": "/images/mockups/built-80s-red.jpg"
+  },
+  "built-70s": {
+    "black": "/images/mockups/built-70s-black.jpg",
+    "white": "/images/mockups/built-70s-white.jpg",
+    "grey": "/images/mockups/built-70s-grey.jpg",
+    "red": "/images/mockups/built-70s-red.jpg"
+  },
+  "built-60s": {
+    "black": "/images/mockups/built-60s-black.jpg",
+    "white": "/images/mockups/built-60s-white.jpg",
+    "grey": "/images/mockups/built-60s-grey.jpg",
+    "red": "/images/mockups/built-60s-red.jpg"
+  },
+  "gray-hair": {
+    "black": "/images/mockups/gray-hair-black.jpg",
+    "white": "/images/mockups/gray-hair-white.jpg",
+    "grey": "/images/mockups/gray-hair-grey.jpg",
+    "red": "/images/mockups/gray-hair-red.jpg"
+  },
+  "dad-bod": {
+    "black": "/images/mockups/dad-bod-black.jpg",
+    "white": "/images/mockups/dad-bod-white.jpg",
+    "grey": "/images/mockups/dad-bod-grey.jpg",
+    "red": "/images/mockups/dad-bod-red.jpg"
+  }
+}
