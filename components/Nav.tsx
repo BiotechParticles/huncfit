@@ -33,10 +33,12 @@ export default function Nav() {
         </div>
 
         {/* Mobile hamburger */}
-        <button className="md:hidden" onClick={() => setOpen(!open)} style={{ color: "#f5f5f5" }}>
-          <div className="w-6 h-0.5 mb-1.5" style={{ backgroundColor: "#f5f5f5" }}></div>
-          <div className="w-6 h-0.5 mb-1.5" style={{ backgroundColor: "#f5f5f5" }}></div>
-          <div className="w-6 h-0.5" style={{ backgroundColor: "#f5f5f5" }}></div>
+        <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Menu">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="4" width="28" height="3" rx="1.5" fill="#f5f5f5"/>
+            <rect y="12.5" width="28" height="3" rx="1.5" fill="#f5f5f5"/>
+            <rect y="21" width="28" height="3" rx="1.5" fill="#f5f5f5"/>
+          </svg>
         </button>
       </div>
 

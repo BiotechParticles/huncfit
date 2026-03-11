@@ -9,9 +9,9 @@ export default function Home() {
       <Nav />
 
       {/* Hero */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20"
+      <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-32 pb-16"
         style={{ backgroundColor: "#1a1a1a" }}>
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto px-4">
 
           {/* Eyebrow */}
           <p className="text-xs font-black uppercase tracking-[0.4em] mb-6" style={{ color: "#ff6b2b" }}>
@@ -95,7 +95,7 @@ export default function Home() {
                 style={{ backgroundColor: "#1a1a1a", color: "#999" }}>
                 Before · Sept 2024
               </div>
-              <Image src="/images/before-1.jpg" alt="Tobin Titus before transformation"
+              <Image src="/images/before-hero.jpg" alt="Tobin Titus before transformation"
                 width={600} height={750} className="w-full object-cover"
                 style={{ maxHeight: "550px", objectPosition: "top" }} />
             </div>
@@ -114,7 +114,7 @@ export default function Home() {
 
           {/* More after photos */}
           <div className="grid grid-cols-3 gap-3">
-            {["after-2.jpg", "after-3.jpg", "after-5.jpg"].map((img, i) => (
+            {["after-3.jpg", "after-2.jpg", "after-5.jpg"].map((img, i) => (
               <Image key={i} src={`/images/${img}`} alt={`Tobin Titus transformation photo ${i + 2}`}
                 width={400} height={500} className="w-full object-cover"
                 style={{ maxHeight: "280px", objectPosition: "top" }} />
