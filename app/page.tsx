@@ -189,12 +189,12 @@ export default function Home() {
             Wear the Brand
           </h2>
           <p className="text-lg mb-8" style={{ color: "#999" }}>
-            Shirts for guys who've put in the work. Dropping soon.
+            Shirts for guys who've put in the work. Available now.
           </p>
-          <Link href="/merch"
-            className="inline-block px-8 py-4 font-black uppercase tracking-widest text-sm"
-            style={{ border: "2px solid #ff6b2b", color: "#ff6b2b" }}>
-            See What's Coming →
+          <Link href="/shop"
+            className="inline-block px-8 py-4 font-black uppercase tracking-widest text-sm hover:opacity-90 transition-all"
+            style={{ backgroundColor: "#ff6b2b", color: "#1a1a1a" }}>
+            Shop Now →
           </Link>
         </div>
       </section>
