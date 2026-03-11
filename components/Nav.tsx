@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -9,9 +10,9 @@ export default function Nav() {
     <nav style={{ backgroundColor: "#1a1a1a", borderBottom: "1px solid #2e2e2e" }}
       className="fixed top-0 left-0 right-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-black tracking-widest uppercase"
-          style={{ color: "#ff6b2b", letterSpacing: "0.15em" }}>
-          HUNC<span style={{ color: "#f5f5f5" }}>FIT</span>
+        <Link href="/">
+          <Image src="/images/huncfit-logo.png" alt="HuncFit" width={56} height={56}
+            className="object-contain" style={{ height: "48px", width: "auto" }} />
         </Link>
 
         {/* Desktop nav */}
