@@ -11,8 +11,12 @@ const PRODUCTS: Record<string, { name: string; price: number; image: string }> =
 };
 
 export async function POST(req: NextRequest) {
+  if (!process.env.STRIPE_SECRET_KEY) {
+    return NextResponse.json({ error: "STRIPE_SECRET_KEY not set" }, { status: 500 });
+  }
+
   const Stripe = (await import("stripe")).default;
-  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, { apiVersion: "2026-02-25.clover" });
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, { apiVersion: "2026-02-25.clover" });
 
   const { productId, size } = await req.json();
   const product = PRODUCTS[productId];
@@ -42,4 +46,12 @@ export async function POST(req: NextRequest) {
   });
 
   return NextResponse.json({ url: session.url });
+}
+
+export async function GET() {
+  return NextResponse.json({
+    stripe_key_set: !!process.env.STRIPE_SECRET_KEY,
+    base_url_set: !!process.env.NEXT_PUBLIC_BASE_URL,
+    printful_key_set: !!process.env.PRINTFUL_API_KEY,
+  });
 }
