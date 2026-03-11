@@ -79,7 +79,7 @@ const products = [
 ];
 
 function mockupSrc(productId: string, color: string, side: "front" | "back") {
-  if (side === "back") return `/images/mockups/${productId}-${color}-back.jpg`;
+  // All mockups are back-design shots; front (logo) uses same file
   return `/images/mockups/${productId}-${color}.jpg`;
 }
 
